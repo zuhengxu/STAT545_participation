@@ -11,8 +11,8 @@ This repo will be renewed after each class and some useful resources might be ad
 Navigation to all in class excercise files
 
 * cm_001
-  *[say hi](https://github.com/STAT545-UBC/Discussion-Internal/issues/2) You can find @zuhengxu in the disscssion board.
-  *[my recommendation to markdown editor](https://github.com/STAT545-UBC/Discussion-Internal/issues/6) two live-preview editors.
+  * [say hi](https://github.com/STAT545-UBC/Discussion-Internal/issues/2) You can find @zuhengxu in the disscssion board.
+  * [my recommendation to markdown editor](https://github.com/STAT545-UBC/Discussion-Internal/issues/6) two live-preview editors.
 * [cm_002](https://github.com/zuhengxu/STAT545_participation/tree/master/cm_002)
 * [cm_003](https://github.com/zuhengxu/STAT545_participation/tree/master/cm_003)
 

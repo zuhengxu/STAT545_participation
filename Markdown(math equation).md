@@ -1,6 +1,6 @@
-# Markdown 公式插入
+# Markdown mathh equation inserting
 
-## Mathjax引擎
+## Mathjax engine
 
 本文简单介绍如何使用macdown插入latex公式，在这里使用**Mathjax**引擎完成，要调用Mathjax引擎需要插入下面这行代码:
 
@@ -11,9 +11,9 @@
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 
-## 行间公式插入
+## equation between lines
 
-此处的语法和tex相同，使用
+same with latex
 
 ```
 $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
@@ -24,15 +24,13 @@ $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
 
 
 
-## 行内公式插入
-此处和tex语法不同，使用
+## equaition in line
+different from latex
 
 ```
 \\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\)
 ```
 效果如下：\\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\)。
 
-## 表格插入
-以后补充
 
 

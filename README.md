@@ -1,6 +1,6 @@
 # Stat545_participation
 
-Hi, welcome to Zuheng(David) Xu's @zuhengxu repo about stat545 in class participation.
+Hi, welcome to Zuheng(David) Xu's [@zuhengxu](https://github.com/zuhengxu) repo about stat545 in class participation.
 
 Generally ,this is repository for exploring version control and mark-down.
 

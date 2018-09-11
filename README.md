@@ -1,4 +1,4 @@
-# Stat545_participation
+# *Stat545_participation*
 
 Hi, welcome to Zuheng(David) Xu's [@zuhengxu](https://github.com/zuhengxu) repo about stat545 in class participation.
 

@@ -13,9 +13,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## R Markdown
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
-
 Here is an eqation:
 
 $$ \alpha = 5+ 2 $$

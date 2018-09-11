@@ -1,4 +1,4 @@
-# Markdown 公式插入
+# Markdown math equation
 
 ## Mathjax Engine
 

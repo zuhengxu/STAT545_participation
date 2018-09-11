@@ -10,4 +10,4 @@ Here is some markdown notes I've taken in class01 and before.
 * [how to insert a math equation](https://github.com/zuhengxu/STAT545_participation/blob/master/Markdown%20Math%20equations.md)
 * [how to build lists](https://github.com/zuhengxu/STAT545_participation/blob/master/lists.md)
 * [a macdown template provided by Macdown](https://github.com/zuhengxu/STAT545_participation/blob/master/markdown%20template.md)
-* [note teken in class01](https://github.com/zuhengxu/STAT545_participation/blob/master/md%20explorer/md%20explorer.md)
+* [note teken in class02](https://github.com/zuhengxu/STAT545_participation/blob/master/md%20explorer/md%20explorer.md)

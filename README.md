@@ -33,3 +33,4 @@ Here is some markdown notes I've taken in class01 and before.
 * [r markdown practce in class03](https://github.com/zuhengxu/STAT545_participation/blob/master/cm_003/in%20class%20excercise_sep11.Rmd) 
 but it looks wierd since we cannot see the output of `.rmd` on github
 * [a `.r` script about basic r syntex and command](https://github.com/zuhengxu/STAT545_participation/blob/master/cm_003/cm003-in%20class%20exercise-R.r)
+* [official R Markdown guide](https://bookdown.org/yihui/rmarkdown/)

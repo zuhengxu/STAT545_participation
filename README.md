@@ -34,3 +34,7 @@ Here is some markdown notes I've taken in class01 and before.
 but it looks wierd since we cannot see the output of `.rmd` on github
 * [a `.r` script about basic r syntex and command](https://github.com/zuhengxu/STAT545_participation/blob/master/cm_003/cm003-in%20class%20exercise-R.r)
 * [official R Markdown guide](https://bookdown.org/yihui/rmarkdown/)
+ how to commit from local computer
+ how to commit from local computer
+a line add to it from local
+how to edit it from local

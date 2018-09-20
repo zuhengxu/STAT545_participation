@@ -458,6 +458,7 @@ gapminder %>%
 
 
 2. Find all entries of Canada, and entries of Algeria occuring in the '60s. 
+<<<<<<< HEAD
 
 ```r
 gapminder %>% 
@@ -506,6 +507,10 @@ gapminder %>%
 ## 10 Afghanistan Asia       1997    41.8 22227415      635.
 ## # ... with 1,694 more rows
 ```
+=======
+3. Find all entries _not_ including Canada and Algeria.
+
+>>>>>>> 94a7c9da88a7806e4d11716290f2b47ab59677bd
 # Bonus Exercises
 
 If there's time remaining, we'll practice with these three exercises. I'll give you 1 minute for each, then we'll go over the answer.

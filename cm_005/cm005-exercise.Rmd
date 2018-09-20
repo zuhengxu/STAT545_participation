@@ -151,11 +151,15 @@ gapminder %>%
   filter(country =="Canada"|(country == "Algeria" & year >=1960 & year <1970))
 ```
 3. Find all entries _not_ including Canada and Algeria.
+<<<<<<< HEAD
 ```{r}
 gapminder %>% 
   filter(!(country =="Canada" &country == "Algeria"))
 
 ```
+=======
+
+>>>>>>> 94a7c9da88a7806e4d11716290f2b47ab59677bd
 # Bonus Exercises
 
 If there's time remaining, we'll practice with these three exercises. I'll give you 1 minute for each, then we'll go over the answer.

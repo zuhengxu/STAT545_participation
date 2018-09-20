@@ -10,6 +10,10 @@ editor_options:
 In this worksheet, we'll be exploring various plot types (i.e., geometric objects), only using the `x` and `y` aesthetics (and `group`).
 
 1. To get started, load the `tidyverse` and `gapminder` R packages. 
+```{r}
+library(tidyverse)
+library(gapminder)
+```
 
 
 ## Scatterplot

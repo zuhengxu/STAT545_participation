@@ -160,9 +160,12 @@ Try a scatterplot with:
 - `geom_density2d()`
 - `geom_smooth()`
 ```{r}
-gvsl + geom_hex() 
-gvsl + geom_density2d()
-gvsl + geom_smooth()
+p1 = gvsl + geom_hex() 
+p2=gvsl + geom_density2d()
+p3=gvsl + geom_point(alpha=0.3)+geom_smooth()
+
+grid.arrange(p1,p2,p3,ncol=3)
+
 ```
 
 
@@ -171,6 +174,12 @@ gvsl + geom_smooth()
 How many countries are in each continent? Use the year 2007.
 
 1. After filtering the gapminder data to 2007, make a bar chart of the number of countries in each continent. Store everything except the geom in the variable `d`.
+```{r}
+gapminder %>% 
+  filter(year==2007) %>% 
+  ggplot(aes(x = continent)) +
+  geom_bar()
+```
 
 
 
@@ -185,6 +194,9 @@ __Uses of bar plots__: Get a sense of relative quantities of categories, or see 
 ## Polar coordinates
 
 - Add `coord_polar()` to a scatterplot.
+```{r}
+gvsl + geom_point() + coord_polar()
+```
 
 
 # Want more practice?

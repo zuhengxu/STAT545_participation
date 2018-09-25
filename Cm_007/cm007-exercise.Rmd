@@ -1,22 +1,39 @@
 ---
 title: "cm007 Exercises: Exploring Aesthetic Mappings"
-output: html_notebook
-editor_options: 
-  chunk_output_type: inline
+output: github_document
 ---
 
 
+```{r}
+library(tidyverse)
+library(gapminder)
+```
 
 # Beyond the x and y aesthetics
 
 Switch focus to exploring aesthetic mappings, instead of geoms. 
 
 ## Shapes
+```{r}
+
+gvsl=ggplot(gapminder,aes(gdpPercap,lifeExp))+
+  scale_x_log10()
+gvsl+geom_point(aes(shape=continent,alpha=0.2))
+
+```
 
 - Try a scatterplot of `gdpPercap` vs `pop` with a categorical variable (continent) as `shape`.
 - As with all (?) aesthetics, we can also have them _not_ as aesthetics!
     - Try some shapes: first as integer from 0-24, then as keyboard characters.
     - What's up with `pch`?
+    
+```{r}
+gvsl+geom_point(shape=2)
+gvsl+geom_point(pch=7)
+gvsl+geom_point(shape="$")# you can choose any leeter you want
+```
+
+
 
 List of shapes can be found [at the bottom of the `scale_shape` documentation](https://ggplot2.tidyverse.org/reference/scale_shape.html).
 
@@ -25,27 +42,65 @@ List of shapes can be found [at the bottom of the `scale_shape` documentation](h
 Make a scatterplot. Then:
 
 - Try colour as categorical variable.
+```{r}
+gvsl+geom_point(aes(color=continent)) # why cant out of aes
+```
 - Try `colour` and `color`. 
+
 - Try colour as numeric variable.
     - Try `trans="log10"` for log scale.
+```{r}
+gvsl+geom_point(aes(color=pop)) +scale_color_continuous(trans="log10")
+gvsl+geom_point(aes(color=lifeExp >60)) #add a bound to the color add logical to color
+``` 
 
 
 Make a line plot of `gdpPercap` over time for all countries. Colour by `lifeExp > 60` (remember that `lifeExp` looks bimodal?)
 
 
 Try adding colour to a histogram. How is this different?
+```{r}
+ggplot(gapminder,aes(lifeExp))+
+  geom_histogram(aes(fill=continent)) #if using color, the color would be on the frame 
+ 
+```
 
 ## Facetting
 
 Make histograms of `gdpPercap` for each continent. Try the `scales` and `ncol` arguments. 
+```{r}
+# using facet x-axix shares, we can free it up
+ggplot(gapminder,aes(lifeExp))+ facet_wrap( ~continent, ncol=5,scales = "free_x")+
+  geom_histogram()
+
+```
 
 Remove Oceania. Add another variable: `lifeExp > 60`. 
+```{r}
+
+ggplot(gapminder,aes(gdpPercap))+
+  facet_grid(continent~lifeExp>60)+
+  geom_histogram()
+```
+
 
 ## Bubble Plots
 
 - Add a `size` aesthetic to a scatterplot. What about `cex`?
+```{r}
+gvsl+geom_point(aes(size=pop),alpha=0.2)+
+  scale_size_area()
+```
+
 - Try adding `scale_radius()` and `scale_size_area()`. What's better?
+```{r}
+gvsl+geom_point(aes(size=pop),alpha=0.2)+
+  scale_radius()
+```
 - Use `shape=21` to distinguish between `fill` (interior) and `colour` (exterior).
+```{r}
+gvsl+geom_point(aes(size=pop,fill=continent),shape=21,color="black")
+```
 
 ## "Complete" plot
 
@@ -54,6 +109,11 @@ Let's try plotting much of the data.
 - gdpPercap vs lifeExp with pop bubbles
 - facet by year
 - colour by continent
+```{r}
+gvsl+geom_point(aes(size=pop,color=continent),alpha=0.5)+
+  scale_size_area()+
+  facet_wrap(~year)
+```
 
 
 
@@ -67,6 +127,15 @@ Let's see how Rwanda's life expectancy and GDP per capita have evolved over time
 - Add `arrow=arrow()` option.
 - Add `geom_text`, with year label. 
 
+```{r}
+gapminder %>% 
+  filter(country=="Rwanda") %>% 
+  arrange(year) %>% 
+  ggplot(aes(gdpPercap,lifeExp)) +
+  #scale_x_log10() +
+  geom_point()+
+  geom_path(arrow=arrow())
+```
 
 ## Two categorical variables
 
@@ -76,6 +145,12 @@ Try `cyl` (number of cylinders) ~ `am` (transmission) in the `mtcars` data frame
 - `geom_count()`.
 - `geom_bin2d()`. Compare with `geom_tile()` with `fill` aes.
 
+```{r}
+ggplot(mtcars,aes(factor(cyl),factor(am)))+
+  geom_bin2d() 
+
+```
+
 ## Overplotting
 
 Try a scatterplot with:
@@ -84,6 +159,11 @@ Try a scatterplot with:
 - `geom_hex()`
 - `geom_density2d()`
 - `geom_smooth()`
+```{r}
+gvsl + geom_hex() 
+gvsl + geom_density2d()
+gvsl + geom_smooth()
+```
 
 
 ## Bar plots

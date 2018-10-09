@@ -50,7 +50,7 @@ if_else(letters == "h", "H", letters)
 
 
 The `if_else` function is useful for changing certain elements in a data frame.
->>>>>>> 2c8be30b8d57fe3efdb168406825070edd459b11
+
 
 Example: Suppose Canada's 1952 life expectancy was mistakenly entered as 68.8 in the data frame, but is actually 70. Fix it using `if_else` and `mutate`. 
 
@@ -201,7 +201,6 @@ Let's stop to identify some theory of function types, and the `dplyr` approach t
 | Window Functions | these take a vector, and return a vector of the same length that depends on the vector as a whole. | `lag`, `rank`, `cumsum` | `mutate`, esp with `group_by` |
 
 For any generic output, we can use dplyr's `do()` function -- but that's a topic for STAT 547. 
-<<<<<<< HEAD
 ```{r}
 rank(c(4,5,3,2,5,5,2,1,6,7)) #average rank to a tie
 ```
@@ -314,7 +313,7 @@ Practice these concepts in the following exercises. It might help you to first i
 1. Convert the population to a number in billions.
 
 2. Compute the change in population from 1962 to 1972 for each country.
-<<<<<<< HEAD
+
 ```{r}
 gapminder %>% 
   filter(pop>=1962 & pop <=1972) %>% 

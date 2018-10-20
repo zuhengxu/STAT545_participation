@@ -186,6 +186,7 @@ p %>%
 
 ```{r}
 library(listviewer)
+library(plotly)
 p %>% 
     ggplotly() %>% 
     plotly_json()
